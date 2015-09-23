@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_app_name">DestPicker</string>
+    <string name="welcome_app_name">Welcome</string>
+    <string name="server_and_port">server:port</string>
+    <string name="start_main">Start Green Navigation</string>
+    <string name="navi_app_name">Navigator</string>
+    <string name="location">Location: </string>
+    <string name="destination">Destination: </string>
+    <string name="heading">Course:  °, heading: </string>
+    <string name="distance">Distance to next node: </string>
+    <string name="eta">ETA</string>
+    <string name="sub_app_name">SubApp</string>
+</resources>

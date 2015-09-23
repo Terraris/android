@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/originTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/location"
+        android:textColor="#536dff"
+        android:textIsSelectable="false"
+        android:textSize="15sp"/>
+
+    <WebView
+        android:id="@+id/mainView"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/heading"
+        android:textColor="#536dff"
+        android:textIsSelectable="false"
+        android:textSize="15sp"
+        android:layout_below="@+id/destTextView"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/destTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/originTextView"
+        android:text="@string/destination"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#536dff"
+        android:textIsSelectable="false"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#536dff"
+        android:textIsSelectable="false"
+        android:textSize="15sp"
+        android:layout_below="@+id/heading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#536dff"
+        android:textIsSelectable="false"
+        android:textSize="15sp"
+        android:text="@string/eta"
+        android:id="@+id/textView"
+        android:layout_below="@+id/distanceTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
