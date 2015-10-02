@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".MainActivity">
+                tools:context=".MainActivity"
+                android:id="@+id/myMainLayout"
+                android:background="@color/primaryColorDark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/primaryColor"
+        android:elevation="4dp"
+        android:minHeight="?android:attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"/>
 
     <TextView
         android:id="@+id/originTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/mainTrackButton"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:text="@string/location"
         android:textColor="#536dff"
         android:textIsSelectable="false"
@@ -19,9 +36,9 @@
     <WebView
         android:id="@+id/mainView"
         android:layout_width="match_parent"
-        android:layout_height="281dp"
+        android:layout_height="380dp"
         android:layout_above="@+id/startButton"
-        android:layout_below="@+id/originTextView"/>
+        android:layout_below="@+id/main_toolbar"/>
 
     <Button
         android:id="@+id/startButton"
@@ -30,7 +47,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/mainTrackButton"
-        android:text="Start Navigator"/>
+        android:text="@string/get_heading"
+        android:background="@color/primaryColorDark"
+        android:elegantTextHeight="false"
+        android:textColor="@color/primaryColor"/>
 
     <Button
         android:id="@+id/mainTrackButton"
@@ -38,6 +58,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/mainView"
-        android:text="Track Me"/>
+        android:text="Track Me"
+        android:background="@color/primaryColorDark"
+        android:textColor="@color/primaryColor"/>
 
 </RelativeLayout>

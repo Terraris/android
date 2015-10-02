@@ -19,28 +19,20 @@
     <application
         android:name="de.uniluebeck.greennav.AppContext"
         android:allowBackup="true"
-        android:label="@string/welcome_app_name">
+        android:label=""
+        android:theme="@style/Theme.AppCompat.NoActionBar">
 
         <activity
-            android:name=".WelcomeScreen"
-            android:label="@string/welcome_app_name">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/main_app_name">
+            android:name=".Settings">
             <intent-filter>
                 <category android:name="android.intent.action.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Navigator"
-            android:label="@string/navi_app_name">
-            <intent-filter>
-                <category android:name="aandroid.intent.action.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>
@@ -49,6 +41,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/> -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
 
 </manifest>
 

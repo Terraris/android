@@ -3,19 +3,31 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".MainActivity">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".MainActivity"
+                android:background="@color/primaryColorDark">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@color/primaryColor"
+        android:minHeight="?android:attr/actionBarSize"
+        android:elevation="4dp"/>
 
     <TextView
         android:id="@+id/originTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:text="@string/location"
-        android:textColor="#536dff"
+        android:textColor="@color/primaryColor"
         android:textIsSelectable="false"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"/>
 
     <WebView
         android:id="@+id/mainView"
@@ -30,10 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/heading"
-        android:textColor="#536dff"
+        android:textColor="@color/primaryColor"
         android:textIsSelectable="false"
         android:textSize="15sp"
-        android:layout_below="@+id/destTextView"
+        android:layout_below="@+id/distanceTextView"
         android:layout_alignParentStart="true"/>
 
     <TextView
@@ -45,7 +57,7 @@
         android:layout_below="@+id/originTextView"
         android:text="@string/destination"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#536dff"
+        android:textColor="@color/primaryColor"
         android:textIsSelectable="false"
         android:textSize="15sp"/>
 
@@ -55,24 +67,37 @@
         android:layout_height="wrap_content"
         android:text="@string/distance"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#536dff"
+        android:textColor="@color/primaryColor"
         android:textIsSelectable="false"
         android:textSize="15sp"
-        android:layout_below="@+id/heading"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_below="@+id/destTextView"
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#536dff"
+        android:textColor="@color/primaryColor"
         android:textIsSelectable="false"
         android:textSize="15sp"
         android:text="@string/eta"
         android:id="@+id/textView"
-        android:layout_below="@+id/distanceTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_below="@+id/heading"
+        android:layout_alignParentStart="true"/>
+
+    <!-- <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_action"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton"
+        android:layout_gravity="right|bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="floatingActionButton"/> -->
 
 </RelativeLayout>
