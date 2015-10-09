@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
+
+import java.util.List;
 
 /**
  * This class provides the welcome screen, which is used to set the serverURLs
@@ -22,7 +26,7 @@ public class Settings extends Activity
     private String serverURL;
     private Switch evaluationSwitch;
     private Switch detailSwitch;
-    private Button start;
+    private Button start, info, contact;
     private Boolean eval = false;
     private Boolean detail = false;
 
@@ -35,7 +39,26 @@ public class Settings extends Activity
         fade();
         final EditText serverText = (EditText) findViewById(R.id.serverEditText);
         Bundle extras = getIntent().getExtras();
-        serverText.setText(extras.getString("SERVER_IP"));
+        //serverText.setText(extras.getString("SERVER_IP")); // debug
+        info = (Button) findViewById(R.id.infoButton);
+        info.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+            }
+        });
+
+        contact = (Button) findViewById(R.id.contactButton);
+        contact.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+            }
+        });
 
         start = (Button) findViewById(R.id.startApp);
         start.setOnClickListener(new View.OnClickListener()
@@ -61,6 +84,10 @@ public class Settings extends Activity
         });
 
         evaluationSwitch = (Switch) findViewById(R.id.eval_switch);
+        if (extras.getBoolean("EVALUATION_MODE"))
+        {
+            evaluationSwitch.setChecked(true);
+        }
         evaluationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
@@ -77,6 +104,10 @@ public class Settings extends Activity
         });
 
         detailSwitch = (Switch) findViewById(R.id.detail_switch);
+        if (extras.getBoolean("DETAIL_MODE"))
+        {
+            detailSwitch.setChecked(true);
+        }
         detailSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override

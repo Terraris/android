@@ -37,7 +37,7 @@ public class Tracker extends Service implements LocationListener
     List<JSInterface> jsInterfaceList = new LinkedList<JSInterface>();
 
     /**
-     * registers a JavaScript Interface to realize the connection to the browser within this app
+     * registers a JavaScript Interface to realize the connection to the browser within this myAppContext
      *
      * @param jsInterface - the registred interface
      */
