@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:id="@+id/mySettingsLayout"
+                android:background="@color/primaryColorDark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:background="@color/primaryColor"
+        android:minHeight="?android:attr/actionBarSize"
+        android:elevation="4dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:alpha=".8"/>
+
+    <Button
+        android:id="@+id/startApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/connect"
+        android:background="@color/primaryColorDark"
+        android:textColor="@color/primaryColor"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
+
+    <EditText
+        android:id="@+id/serverEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:hint="@string/server_and_port"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/accentColor"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="40sp"
+        android:layout_marginTop="40sp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/evaluation_mode"
+        android:id="@+id/eval_switch"
+        android:layout_below="@+id/serverEditText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:checked="false"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_mode"
+        android:id="@+id/detail_switch"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/eval_switch"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/languages"
+        android:id="@+id/languageSpinner"
+        android:layout_below="@+id/detail_switch"
+        android:layout_alignParentStart="true"
+        android:background="@color/primaryColorDark"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_button"
+        android:id="@+id/infoButton"
+        android:background="@color/primaryColorDark"
+        android:textColor="@color/primaryColor"
+        android:layout_marginLeft="30sp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/serverEditText"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_button"
+        android:id="@+id/contactButton"
+        android:background="@color/primaryColorDark"
+        android:textColor="@color/primaryColor"
+        android:layout_marginRight="30sp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/serverEditText"/>
+
+</RelativeLayout>
